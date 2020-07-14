@@ -1,17 +1,19 @@
-# result = rand(0..10)    
+# result = rand(0..9)  
 # input =""
 
 # while true
 #     puts "0～9の数字を入力してください"  
 #     input = gets.to_i 
-#     break if input == result
-#     if input < result
+#     if input == result
+#         puts "正解！#{result}でした！"
+#         exit
+#     elsif input < result
 #         puts "#{input}より大きい数字です"
 #     else input > result
 #         puts "#{input}より小さい数字です"
 #     end
 # end
-# puts "正解！#{result}でした！"
+
 
 
 
@@ -29,6 +31,9 @@
 #     end
 #     num += 1
 # end
+
+
+
 
 # def register_review(reviews)
 #     puts "商品名を入力してください"
@@ -69,4 +74,3 @@
 #         exit
 #     end
 # end
-
