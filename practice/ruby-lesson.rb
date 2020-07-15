@@ -37,22 +37,18 @@
 
 # def register_review(reviews)
 #     puts "商品名を入力してください"
-#     input_productName = gets.chomp.to_i
+#     input_productName = gets.chomp
 #     puts "感想を入力してください"
-#     input_productReview = gets.chomp.to_i
+#     input_productReview = gets.chomp
 
-#     user = { productName: input_productName, productReview: input_productReview }
-#     reviews << user
+#     reviews << { productName: input_productName, productReview: input_productReview }
 # end
 
 # def show_reviews(reviews)
-#     # ループを使ってレビューを全て表示させましょう。
-#     # 下記のように表示されるようにしてください。
-#     # 【】はコードに直してください
-#     reviews.each do |user|
+#     reviews.each do |review|
 #     puts "----------------------------"
-#     puts "商品名：#{ user[:productName] }"
-#     puts "感想：#{ user[:productReview] }"
+#     puts "商品名：#{ review[:productName] }"
+#     puts "感想：#{ review[:productReview] }"
 #     end
 # end
 
