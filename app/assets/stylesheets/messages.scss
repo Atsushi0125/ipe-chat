@@ -1,3 +1,106 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./color";
+
+.main {
+    height: calc(100vh - 80px);  // vhは「viewport height」の略で、viewport の高さ（ブラウザの高さ）に対する指定です。100vhで表示しているスマホやPCのウィンドウサイズの100%という意味になります 
+    .chat {
+        padding: 0 20px;
+        height: calc(100vh - 160px);
+        overflow-y: scroll;
+        background-color: $back-color;
+        position: relative;
+        .chat-area {
+            width: 80%;
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            transform:translateX(-50%);
+            .chat-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 10px;
+                margin-bottom: 1em;
+                padding: .7em 1em;
+                background-color: $main-color;
+                .chat-text {
+                        width: 85%;
+                    .user-name {
+                        font-weight: bold;
+                        font-size: 1em;
+                    }
+                    .date-time {
+                        font-weight: normal;
+                        margin-left: 30px;
+                    }
+                    .main-text {
+                    margin-left: .7em;
+                    }
+                }
+            .chat-edit {
+                width: 15%;
+                li {
+                    background-color: $sub-color;
+                    border-radius: 5px;
+                    margin-right: 2em;
+                    text-align: center;
+                    a {
+                        padding: .7em 2em;
+                        color: $main-color;
+                        font-size: 12px;
+                        font-weight: bold;
+                        margin-top: .5em;
+                        text-decoration: none;
+                        width: 100%;
+                        display: block;
+                    }
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+            }
+        }
+        
+        
+    }
+    
+    .chat-form {
+        height: 80px;
+        padding: 20px;
+        background-color: $sub-color;
+        position: fixed;
+        bottom: 0px; 
+        width: 100%;
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .chatInput_textarea {
+                height: 40px;
+                width: 90%;
+                margin: 0 30px;
+                font-size: 12px;
+                padding: .5em;
+            }
+            .send_button {
+                background-color: $main-color;
+                border-radius: 5px;
+                margin-right: 2em;
+                padding: .7em 2em;
+                color: $sub-color;
+                border: none;
+                font-weight: bold;
+                text-decoration: none;
+                width: 120px;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+    }
+}
