@@ -11,10 +11,10 @@
                 <div class="chat-edit">
                     <ul>
                         <li>
-                            <a href="/">edit</a>
+                            <%= link_to "edit", messages_edit_path(message.id) %>
                         </li>
                         <li>
-                            <a href="/">delete</a>
+                            <%= link_to "delete", messages_delete_path(message.id), method: :delete, data: {confirm: "削除しますか？"} %>
                         </li>
                     </ul>
                 </div>
@@ -28,9 +28,9 @@
         </div>
     </div>
     <div class="chat-form">
-        <form>
-            <input class="chatInput_textarea" type="text" placeholder="ここにメッセージ内容を入力">
-            <input class="send_button" type="submit" value="SEND">
-        </form>
+            <%= form_with model: @message, url: messages_create_path, id: "new_message", local: true do |f| %>
+                <%= f.text_field :content, class: "chatInput_textarea", placeholder: "ここにメッセージ内容を入力"  %>
+                <%= f.submit "SEND", class: "send_button" %>
+            <% end %>
     </div>
 </div>

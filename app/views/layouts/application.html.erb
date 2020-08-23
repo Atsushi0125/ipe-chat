@@ -23,6 +23,10 @@
           <li><a href="#">LOGOUT</a></li>
       </ul>
     </header>
+    <% if notice %>
+      <p class="flash"><%= notice %></p>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
