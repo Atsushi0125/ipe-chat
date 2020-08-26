@@ -5,7 +5,7 @@
             <% @messages.each do |message| %>
             <div class="chat-container">
                 <div class="chat-text">
-                    <p class="user-name">テスト太郎<span class="date-time"><%= message.created_at.strftime("%Y/%m/%d(%a) %H:%M") %></span></p>
+                    <p class="user-name"><%= message.user.name %><span class="date-time"><%= message.created_at.strftime("%Y/%m/%d(%a) %H:%M") %></span></p>
                     <p class="main-text"><%= message.content %></p>
                 </div>
                 <div class="chat-edit">
