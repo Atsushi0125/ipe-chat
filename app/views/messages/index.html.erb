@@ -10,12 +10,15 @@
                 </div>
                 <div class="chat-edit">
                     <ul>
+                    <% if message.user_id == current_user.id %>
                         <li>
                             <%= link_to "edit", messages_edit_path(message.id) %>
                         </li>
                         <li>
                             <%= link_to "delete", messages_delete_path(message.id), method: :delete, data: {confirm: "削除しますか？"} %>
                         </li>
+                    <% else %>
+                    <% end %>
                     </ul>
                 </div>
             </div>
